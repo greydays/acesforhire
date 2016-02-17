@@ -63,7 +63,7 @@ ul li {
   0 10px 10px -10px black;
 }
 
-#res_title {
+#res_title, #res_status {
   padding: 10px 15px 10px;
   font-weight: bold;
   background-color: lightblue;
@@ -72,11 +72,17 @@ ul li {
   font-size: 16px;
   text-transform: uppercase;
 }
-.a_toggle:link {
+.a_toggle:link, .res-text a {
   color: #83c3e8;
 }
-.a_toggle:hover {
+.a_toggle:hover, .res-text a:hover {
   color: red;
+}
+.res-text {
+  line-height: 1.2;
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 14px;
 }
 .flex-container {
   display:flex;
