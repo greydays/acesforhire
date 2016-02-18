@@ -19,7 +19,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="menu-label">Menu</span>
         </button>
         <a class="navbar-brand" href="#">Aces Town Car Service</a>
       </div>
@@ -41,37 +40,47 @@
     </nav>
 
     <main class="main_container">
-
-      <div class="res_container container completed">
+ <!-- search bar -->
+      <div class="container">
         <div class="row">
-          <div class="col-sm-9" id="res_title">TITLE OF RESERVATION</div>
-          <div class="col-sm-3" id="res_status">Completed</div>
+          <div class="col-sm-4 col-sm-offset-4">
+            <div class="input-group">
+              <input type="text" class="form-control" id="resend-email" placeholder="Search by passenger last name...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <p>or</p>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <div class='input-group date' id='datetimepicker1'>
+                <input type='date' class="form-control" />
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+          </div>
         </div>
-        <div class="row flex-container">
+      </div>
+
+      <div class="res_container container pending">
+        <div class="row">
+          <!-- add class of "res-cmplt" for coloring -->
+          <div class="col-sm-12" id="res_title">12/15/16 Wednesday @ 12:30 PM<span id="res_status">Pending</span>
+          </div>
+        </div>
+        <div class="row flex-container res-body">
           <div class="row flex-item-1">
             <div class="col-sm-6">
-              <b>CONFIRMATION:</b> XHGESGEE<br>
               <b>SERVICE TYPE:</b> Airport Transfer<br>
               <b>VEHICLE TYPE:</b> Luxury Sedan<br>
-              <b>TOTAL CHARGE:</b> $55.50<br>
-              <b>CHARGED TO:</b> Visa ****8912
-              <div>
-                <a href="#detailed-charge" class="a_toggle" data-toggle="collapse"> Show/hide Detailed Charge</a>
-                <div id="detailed-charge" class="collapse">
-                  <b>BASE RATE:</b> $55.00<BR>
-                  <b>FUEL SURCHARGE:</b> $1.56<BR>
-                  <b>WAIT TIME 5 MINUTES:</b> $5.00<BR>
-                  <b>TOLLS:</b> $0.00<BR>
-                  <b>MEET AND GREET:</b> $0.00<BR>
-                  <b>CHILD SEAT:</b> $0.00<BR>
-                  <b>SERVICE CHARGE:</b> 20%<BR>
-                  <b>TOTAL CHARGE:</b> $73.87<BR>
-                </div>
-              </div>
             </div>
             <div class="col-sm-6">
               <b>PASSENGER NAME:</b> Timm McIntosh <br>
-              <b>PASSENGER NUMBER:</b> 000-000-0000<br>
+              <b>PASSENGER PHONE:</b> 000-000-0000<br>
               <b>PICKUP ADDRESS:</b><br>311 15th Ave, Seattle, WA 98122<br>
               <b>DROPOFF ADDRESS:</b><br>17801 International Blvd, Seattle, WA 98158<br>
               <b>NOTES:</b><br>Be on time, please<br>
@@ -79,9 +88,7 @@
           </div>
           <div class="res-col button-col flex-item-2">
             <div class="btn-container">
-              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">CANCEL RESERVATION</button></a>
-              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">CANCEL RESERVATION</button></a>
-              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">CANCEL RESERVATION</button></a>
+              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">Cancel Request</button></a>
             </div>
           </div>
         </div>

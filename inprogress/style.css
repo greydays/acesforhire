@@ -4,7 +4,7 @@
   font-weight: normal;
   src: local('Bebas Neue'), url('BebasNeue.woff') format('woff');
 }
-
+/*-------------- base --------------- */
 body {
   font-family: arial, sans-serif;
   line-height: 24px;
@@ -25,36 +25,63 @@ h3 {
   text-transform: uppercase;
   letter-spacing: .75px;
 }
-
 a:link {
   color: #333;
   text-decoration: none;
 }
-
 a:visited {
   color: #333;
   text-decoration: none;
 }
-
 a:hover {
   color: #83c3e8;
   text-decoration: none;
 }
-
 a:active {
   color: #83c3e8;
   text-decoration: none;
 }
-
 ul li {
   font-weight: bold;
   text-transform: uppercase;
+}
+footer {
+  margin: 20px;
+}
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  padding: 0 0 1px 0;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.btn-default:hover {
+  color: #fff;
+  background-color: #333;
+  border-color: #333; /*set the color you want here*/
+}
+.btn-side {
+  margin: 0 0 10px 0;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+  height: 40px;
 }
 .main_container {
   margin: 51px auto 20px auto;
   padding: 14px;
 }
-/*reservation styling*/
+
+/* --------- reservation styling ---------- */
+
 .res_container {
   border: 2px solid black;
   border-radius: 5px;
@@ -63,14 +90,29 @@ ul li {
   0 10px 10px -10px black;
 }
 
-#res_title, #res_status {
+#res_title {
   padding: 10px 15px 10px;
   font-weight: bold;
-  background-color: lightblue;
   border-radius: 5px 5px 0 0;
   border-bottom: 2px solid black;
   font-size: 16px;
   text-transform: uppercase;
+}
+#res_status {
+  display: block;
+}
+  /*color change depending on status*/
+.pending .res-body, .pending .res-text {
+  background-color: #E8E8E8;
+}
+.pending #res_title {
+  background-color: #FFFEA1;
+}
+.completed #res_title {
+  background-color: #B8B8B8;
+}
+.confirmed #res_title {
+  background-color: #B8FF94;
 }
 .a_toggle:link, .res-text a {
   color: #83c3e8;
@@ -82,7 +124,8 @@ ul li {
   line-height: 1.2;
   font-style: italic;
   font-size: 12px;
-  margin-top: 14px;
+  margin: 0 -15px 0 -15px;
+  padding: 14px;
 }
 .flex-container {
   display:flex;
@@ -98,12 +141,13 @@ ul li {
   flex-basis: 300px;
   margin: 2px;
 }
-
 .flex-item-2 {
   width: 250px;
   margin: 14px;
 }
-/*form styling*/
+
+/* -------------- form styling --------------- */
+
 .custom-form fieldset {
   max-width: 500px;
   margin: auto;
@@ -116,7 +160,7 @@ ul li {
   width: 100%;
   text-transform: uppercase;
 }
-.custom-form input {
+input {
   font-size: 12px;
   font-style: italic;
   border-color: black;
@@ -143,27 +187,10 @@ ul li {
   text-align: center;
 }
 
+/* ---------- media queries ------------- */
 
-.btn {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 0 10px;
-  padding: 0 0 1px;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  color: black;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.btn-default:hover {
-  color: #fff;
-  background-color: #333;
-  border-color: #333; /*set the color you want here*/
-}
-
-footer {
-  margin: 20px;
+@media (min-width: 500px) {
+  #res_status {
+    float: right;
+  }
 }
