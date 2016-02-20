@@ -19,9 +19,22 @@
 #Questions:
 
 - Header Nav - add links for logged in?  PHP for auth state?
+A: Make modules for both states
 
-- Edits for confirmed res - individual inputs? drop form? pop-up?
+- Edits for confirmed res - individual inputs? drop form? pop-up? A: individual inputs
 
-- Resend password or forgot login form?
+- Greg to do code review? A: email greg
 
-- Greg to do code review?
+##Fixes
+
+fix buttons, now that non-bootstrap styling is gone.
+
+fix button col with media query for 100% width on mobile.
+
+search bar fixed width
+
+center column, not in-line formatting
+
+change first and second columns to list items
+
+add margin-top to first two columns.
