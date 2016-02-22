@@ -16,6 +16,15 @@ body {
   border-bottom: 1px solid black;
   text-transform: uppercase;
 }
+.navbar-brand {
+  font-family: "Impact", arial, sans-serif;
+}
+.navbar-brand img {
+  margin-top: -10px;
+  display: inline-block;
+  height: 40px;
+  vertical-align: top;
+}
 .navbar .icon-bar {
   background-color: black;
 }
