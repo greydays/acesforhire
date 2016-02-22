@@ -19,6 +19,10 @@ body {
 .navbar .icon-bar {
   background-color: black;
 }
+nav li {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 h3 {
   font-size: 34px;
   font-family: "Bebas Neue";
@@ -26,23 +30,36 @@ h3 {
   letter-spacing: .75px;
 }
 a:link {
-  color: #333;
+  color: #83c3e8;
+  /*text-decoration: underline;
+    This presently interferes with buttons that have <a> tags. Do the buttons need <a> tags? If so, do they need to be styled separately?*/
 }
 a:visited {
-  color: #333;
+  color: #83c3e8;
   text-decoration: none;
 }
 a:hover {
-  color: #83c3e8;
+  color: red;
   text-decoration: none;
 }
 a:active {
+  color: red;
+  text-decoration: none;
+}
+nav a:link {
+  color: #333;
+}
+nav a:visited {
+  color: #333;
+  text-decoration: none;
+}
+nav a:hover {
   color: #83c3e8;
   text-decoration: none;
 }
-ul li {
-  font-weight: bold;
-  text-transform: uppercase;
+nav a:active {
+  color: #83c3e8;
+  text-decoration: none;
 }
 footer {
   margin: 20px;
@@ -56,35 +73,25 @@ footer {
   background-color: #333;
   border-color: #333; /*set the color you want here*/
 }
-.btn-side {
-  margin: 0 0 10px 0;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  color: black;
-  height: 40px;
-}
 .main_container {
   margin: 51px auto 20px auto;
   padding: 14px;
 }
 /* --------------- search bar -----------------*/
-.search-group {
-  width: 500px;
-}
-.search-or {
-  text-align: center;
-}
+  .search-or {
+    margin: -12px 10px 0px 10px;
+  }
+  .search-date {
+    margin-bottom: 10px;
+  }
 /* --------- reservation styling ---------- */
 
 .res_container {
   border: 2px solid black;
   border-radius: 5px;
-  box-shadow: -6px 0 white,
-  6px 0 white,
-  0 10px 10px -10px black;
+  box-shadow: -6px 0 white, 6px 0 white, 0 10px 10px -10px black;
+  margin-bottom: 14px;
 }
-
 #res_title {
   padding: 10px 15px 10px;
   font-weight: bold;
@@ -109,13 +116,6 @@ footer {
 .confirmed #res_title {
   background-color: #B8FF94;
 }
-.a_toggle:link, .res-text a {
-  color: #83c3e8;
-  text-decoration: underline;
-}
-.a_toggle:hover, .res-text a:hover {
-  color: red;
-}
 .res-text {
   line-height: 1.2;
   font-style: italic;
@@ -123,7 +123,7 @@ footer {
   margin: 0 -15px 0 -15px;
   padding: 14px;
 }
-.flex-container {
+.res-body {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -131,15 +131,34 @@ footer {
   align-content: flex-start;
   align-items: flex-start;
 }
-.flex-item-1 {
+.res-details {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 300px;
   margin: 2px;
 }
-.flex-item-2 {
-  width: 250px;
+.pass-info, .pmt-info {
+  margin-top: 10px;
+  list-style: none;
+}
+.button-col {
+  width: 100%;
   margin: 14px;
+}
+.li-bold {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+.pass-info_ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.collapse_ul {
+  list-style: none;
+  padding: 0;
 }
 
 /* -------------- form styling --------------- */
@@ -175,17 +194,31 @@ input {
   font-size: 12px;
   font-style: italic;
 }
-.custom-form a {
-  color: #769FD1;
-  text-decoration: underline;
-}
 .custom-form p {
   text-align: center;
 }
 
 /* ---------- media queries ------------- */
-
-@media (min-width: 500px) {
+  @media (min-width: 600px) {
+  .search-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: flex-end;
+  }
+  .search-name {
+    width: 275px;
+  }
+  .search-or {
+    margin: 4px 10px 0 10px;
+  }
+  .search-date {
+    width: 202px;
+  }
+  .button-col {
+    width: 250px;
+    margin: 14px;
+  }
   #res_status {
     float: right;
   }

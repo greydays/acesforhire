@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aces Town Car Service | Reservations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="inprogress/style.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- [if lt IE 9]>
+  <script src="../../assets/js/html5shiv.js"</script>
+  <script src="../../assets/js/respond.min.js"></script>
+  <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Aces Town Car Service</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Request Service</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-user"></span> Create Account</a>
+          </li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="#"> FAQ</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+
+    <main class="main_container">
+
+ <!-- search bar -->
+      <div class="container">
+        <div class="row">
+          <div class="search-group col-sm-12">
+            <div class="input-group search-name">
+              <input type="text" class="form-control" id="resend-email" placeholder="Search by Passenger last name...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+            <div class="search-or">or</div>
+            <div class="input-group search-date">
+              <input type='date' id="date-search-input" class="form-control" />
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="res_container container confirmed">
+        <div class="row">
+          <div class="col-sm-12" id="res_title">12/15/16 Wednesday @ 12:30 PM<span id="res_status">Confirmed</span>
+          </div>
+        </div>
+        <div class="row res-body">
+          <div class="res-details">
+            <ul class="pmt-info col-sm-6">
+              <li><span class="li-bold">Confirmation:</span>XHGESGEE</li>
+              <li><span class="li-bold">Service Type:</span>Airport Transfer</li>
+              <li><span class="li-bold">Vehicle Type:</span>Luxury Sedan</li>
+              <li><span class="li-bold">Total Charge:</span>$55.50</li>
+              <li><span class="li-bold">Payment:</span>Visa ****8912 <a href="#conf-id1-card-edit" data-toggle="collapse"> edit</a></li>
+              <li id="conf-id1-card-edit" class="collapse">
+                <form class="input-group">
+                  <input type="tel" placeholder="0000-0000-0000-0000" class="form-control btn-side" id="id1-card" required>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">update</button>
+                  </span>
+                </form>
+              </li>
+            </ul>
+            <ul class="pass-info col-sm-6">
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Passenger Name:</li>
+                  <li>Timm McIntosh<a href="#conf-id1-name-edit" data-toggle="collapse"> edit</a></li>
+                  <li id="conf-id1-name-edit" class="collapse">
+                    <form class="input-group">
+                      <input type="text" placeholder="John Doe" class="form-control btn-side" id="id1-name" required>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">update</button>
+                      </span>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Passenger Phone:</li>
+                  <li>000-000-0000<a href="#conf-id1-tel-edit" data-toggle="collapse"> edit</a></li>
+                  <li id="conf-id1-tel-edit" class="collapse">
+                    <form class="input-group">
+                      <input type="tel" placeholder="000-000-0000" class="form-control btn-side" id="id1-tel" required>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">update</button>
+                      </span>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Beginning Address:</li>
+                  <li>311 15th Ave, Seattle, WA 98122<a href="#conf-id1-begin-edit" data-toggle="collapse"> edit</a></li>
+                  <li id="conf-id1-begin-edit" class="collapse">
+                    <form class="input-group">
+                      <input type="text" placeholder="address" class="form-control btn-side" id="id1-begin" required>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">update</button>
+                      </span>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Ending Address:</li>
+                  <li>17801 International Blvd, Seattle, WA 98158<a href="#conf-id1-end-edit" data-toggle="collapse"> edit</a></li>
+                  <li id="conf-id1-end-edit" class="collapse">
+                    <form class="input-group">
+                      <input type="text" placeholder="address" class="form-control btn-side" id="id1-end" required>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">update</button>
+                      </span>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Notes:</li>
+                  <li>Be on time, please<a href="#conf-id1-notes-edit" data-toggle="collapse"> edit</a></li>
+                  <li id="conf-id1-notes-edit" class="collapse">
+                    <form class="input-group">
+                      <input type="text" placeholder="notes" class="form-control btn-side" id="id1-notes" required>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">update</button>
+                      </span>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="button-col">
+            <div class="btn-container">
+              <a href="#id1-resend-rcpt" data-toggle="collapse"><button type="button" class="btn btn-default btn-md btn-block">Resend Confirmation</button></a>
+              <div id="id1-resend-rcpt" class="collapse">
+                <form class="input-group">
+                  <input type="email" class="form-control btn-side" id="resend-email" placeholder="email address" required>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Send</button>
+                  </span>
+                </form>
+              </div>
+              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">Request a Change</button></a>
+              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">Contact Chauffeur</button></a>
+              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">Cancel Reservation</button></a>
+            </div>
+          </div>
+        </div>
+        <!-- links to faq and ToS needed -->
+        <p class="res-text">*Base charge does not include any wait time, tolls, extra stops, change of orginating or destination addresses. A 20% service charge is added to all reservations for your chauffeur. Although it is not necessary, you are more than welcome to tip your chauffeur in addtion to the service charge. For a full explanation of fees visit our <a href="">Terms of Service</a> and <a href="">FAQ</a>.</p>
+      </div>
+
+      <div class="res_container container completed">
+        <div class="row">
+          <!-- add class of "res-cmplt" for coloring -->
+          <div class="col-sm-12" id="res_title">12/15/15 WEDNESDAY @ 12:30 PM<span id="res_status">Completed</span>
+          </div>
+        </div>
+        <div class="row res-body">
+          <div class="row res-details">
+            <ul class="pmt-info col-sm-6">
+              <li><span class="li-bold">CONFIRMATION:</span>XHGESGEE</li>
+              <li><span class="li-bold">SERVICE TYPE:</span>Airport Transfer</li>
+              <li><span class="li-bold">VEHICLE TYPE:</span>Luxury Sedan</li>
+              <li><span class="li-bold">TOTAL CHARGE:</span>$55.50</li>
+              <li><span class="li-bold">Charged To:</span>Visa ****8912</li>
+              <li>
+                <a href="#id2-detailed-charge" class="a_toggle" data-toggle="collapse"> Show/hide Detailed Charge</a>
+              </li>
+              <li id="id2-detailed-charge" class="collapse">
+                <ul class="collapse_ul">
+                  <li><span class="li-bold">BASE RATE:</span> $55.00</li>
+                  <li><span class="li-bold">FUEL SURCHARGE:</span> $1.56</li>
+                  <li><span class="li-bold">WAIT TIME 5 MINUTES:</span> $5.00</li>
+                  <li><span class="li-bold">TOLLS:</span> $0.00</li>
+                  <li><span class="li-bold">MEET AND GREET:</span> $0.00</li>
+                  <li><span class="li-bold">CHILD SEAT:</span> $0.00</li>
+                  <li><span class="li-bold">SERVICE CHARGE:</span> 20%</li>
+                  <li><span class="li-bold">TOTAL CHARGE:</span> $73.87</li>
+                </ul>
+              </li>
+            </ul>
+          <ul class="pass-info col-sm-6">
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Passenger Name:</li>
+                  <li>Timm McIntosh</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Passenger Phone:</li>
+                  <li>000-000-0000</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Beginning Address:</li>
+                  <li>311 15th Ave, Seattle, WA 98122</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Ending Address:</li>
+                  <li>17801 International Blvd, Seattle, WA 98158</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Notes:</li>
+                  <li>Be on time, please</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="res-col button-col flex-item-2">
+            <div class="btn-container">
+              <a href="#id2-resend-rcpt" data-toggle="collapse"><button type="button" class="btn btn-default btn-md btn-block">Resend Receipt</button></a>
+              <div id="id2-resend-rcpt" class="collapse">
+                <form class="input-group">
+                  <input type="email" class="form-control btn-side" id="resend-email" placeholder="email address" required>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Send</button>
+                  </span>
+                </form>
+              </div>
+              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">Make this trip again</button></a>
+            </div>
+          </div>
+        </div>
+        <!-- links to faq and ToS needed -->
+        <p class="res-text">*Base charge does not include any wait time, tolls, extra stops, change of orginating or destination addresses. A 20% service charge is added to all reservations for your chauffeur. Although it is not necessary, you are more than welcome to tip your chauffeur in addtion to the service charge. For a full explanation of fees visit our <a href="">Terms of Service</a> and <a href="">FAQ</a>.</p>
+      </div>
+
+      <div class="res_container container pending">
+        <div class="row">
+          <!-- add class of "res-cmplt" for coloring -->
+          <div class="col-sm-12" id="res_title">12/15/16 Wednesday @ 12:30 PM<span id="res_status">Pending</span>
+          </div>
+        </div>
+        <div class="row flex-container res-body">
+          <div class="row res-details">
+            <ul class="pmt-info col-sm-6">
+              <li><span class="li-bold">SERVICE TYPE:</span>Airport Transfer</li>
+              <li><span class="li-bold">VEHICLE TYPE:</span>Luxury Sedan</li>
+            </ul>
+            <ul class="pass-info col-sm-6">
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Passenger Name:</li>
+                  <li>Timm McIntosh</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Passenger Phone:</li>
+                  <li>000-000-0000</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Beginning Address:</li>
+                  <li>311 15th Ave, Seattle, WA 98122</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Ending Address:</li>
+                  <li>17801 International Blvd, Seattle, WA 98158</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="pass-info_ul">
+                  <li class="li-bold">Notes:</li>
+                  <li>Be on time, please</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="res-col button-col flex-item-2">
+            <div class="btn-container">
+              <a href="#"><button type="button" class="btn btn-default btn-md btn-block">Cancel Request</button></a>
+            </div>
+          </div>
+        </div>
+        <!-- links to faq and ToS needed -->
+        <p class="res-text">*Base charge does not include any wait time, tolls, extra stops, change of orginating or destination addresses. A 20% service charge is added to all reservations for your chauffeur. Although it is not necessary, you are more than welcome to tip your chauffeur in addtion to the service charge. For a full explanation of fees visit our <a href="">Terms of Service</a> and <a href="">FAQ</a>.</p>
+      </div>
+
+    </main>
+    <footer>
+    <p>&copy; 2015 Aces Town Car Service</p>
+    </footer>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
