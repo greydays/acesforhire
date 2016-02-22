@@ -4,6 +4,8 @@
 
 - The logo gif has been inserted into the create-account.html header, but the font isn't right. The logo and company name may need to be a single image. Or perhaps you can just use the logo gif after the initial splash page.
 
-- The navbar is too long on ipad portrait view: limit nav links? Shorten link names? Drop down menu? Change query to menu button at larger view?
+- The navbar is too long on ipad portrait view: limit nav links? Shorten link names? Drop down menu? Change query to menu button at larger view? Unfix the header?
 
 - the calendar glyph on the date search is displaying weird on ios. Is fine on browers and android.
+
+- date search input placeholder is displaying oddly on Windows Edge browser. It displays as a text input on IE 11. Everything displays as intended on Chrome for windows.
