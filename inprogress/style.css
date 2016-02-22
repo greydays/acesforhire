@@ -16,8 +16,21 @@ body {
   border-bottom: 1px solid black;
   text-transform: uppercase;
 }
+.navbar-brand {
+  font-family: "Impact", arial, sans-serif;
+}
+.navbar-brand img {
+  margin-top: -10px;
+  display: inline-block;
+  height: 40px;
+  vertical-align: top;
+}
 .navbar .icon-bar {
   background-color: black;
+}
+nav li {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 h3 {
   font-size: 34px;
@@ -26,40 +39,52 @@ h3 {
   letter-spacing: .75px;
 }
 a:link {
-  color: #333;
-  text-decoration: none;
+  color: #83c3e8;
+  /*text-decoration: underline;
+    This presently interferes with buttons that have <a> tags. Do the buttons need <a> tags? If so, do they need to be styled separately?*/
 }
 a:visited {
-  color: #333;
+  color: #83c3e8;
   text-decoration: none;
 }
 a:hover {
-  color: #83c3e8;
+  color: red;
   text-decoration: none;
 }
 a:active {
+  color: red;
+  text-decoration: none;
+}
+nav a:link {
+  color: #333;
+}
+nav a:visited {
+  color: #333;
+  text-decoration: none;
+}
+nav a:hover {
   color: #83c3e8;
   text-decoration: none;
 }
-ul li {
-  font-weight: bold;
-  text-transform: uppercase;
+nav a:active {
+  color: #83c3e8;
+  text-decoration: none;
+}
+.active {
+  background-color: #eee;
+}
+.active a {
+  text-decoration: underline;
+}
+.active a:hover {
+  color: #333;
 }
 footer {
   margin: 20px;
+  text-align: center;
 }
 .btn {
-  font-size: 16px;
-  font-weight: bold;
   margin: 0 0 10px 0;
-  padding: 0 0 1px 0;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  color: black;
-  height: 40px;
-  text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
 }
 .btn-default:hover {
@@ -67,29 +92,25 @@ footer {
   background-color: #333;
   border-color: #333; /*set the color you want here*/
 }
-.btn-side {
-  margin: 0 0 10px 0;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  color: black;
-  height: 40px;
-}
 .main_container {
   margin: 51px auto 20px auto;
   padding: 14px;
 }
-
+/* --------------- search bar -----------------*/
+  .search-or {
+    margin: -12px 10px 0px 10px;
+  }
+  .search-date {
+    margin-bottom: 10px;
+  }
 /* --------- reservation styling ---------- */
 
 .res_container {
   border: 2px solid black;
   border-radius: 5px;
-  box-shadow: -6px 0 white,
-  6px 0 white,
-  0 10px 10px -10px black;
+  box-shadow: -6px 0 white, 6px 0 white, 0 10px 10px -10px black;
+  margin-bottom: 14px;
 }
-
 #res_title {
   padding: 10px 15px 10px;
   font-weight: bold;
@@ -114,12 +135,6 @@ footer {
 .confirmed #res_title {
   background-color: #B8FF94;
 }
-.a_toggle:link, .res-text a {
-  color: #83c3e8;
-}
-.a_toggle:hover, .res-text a:hover {
-  color: red;
-}
 .res-text {
   line-height: 1.2;
   font-style: italic;
@@ -127,23 +142,66 @@ footer {
   margin: 0 -15px 0 -15px;
   padding: 14px;
 }
-.flex-container {
+.res-body {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-.flex-item-1 {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 300px;
+.res-details {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: 300px;
+      -ms-flex-preferred-size: 300px;
+          flex-basis: 300px;
   margin: 2px;
 }
-.flex-item-2 {
-  width: 250px;
+.pass-info, .pmt-info {
+  margin-top: 10px;
+  list-style: none;
+}
+.button-col {
+  width: 100%;
   margin: 14px;
+}
+.li-bold {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+.pass-info_ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.collapse_ul {
+  list-style: none;
+  padding: 0;
 }
 
 /* -------------- form styling --------------- */
@@ -179,17 +237,43 @@ input {
   font-size: 12px;
   font-style: italic;
 }
-.custom-form a {
-  color: #769FD1;
-  text-decoration: underline;
-}
 .custom-form p {
   text-align: center;
 }
 
 /* ---------- media queries ------------- */
-
-@media (min-width: 500px) {
+  @media (min-width: 600px) {
+  .search-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: no-wrap;
+        -ms-flex-wrap: no-wrap;
+            flex-wrap: no-wrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .search-name {
+    width: 275px;
+  }
+  .search-or {
+    margin: 4px 10px 0 10px;
+  }
+  .search-date {
+    width: 202px;
+  }
+  .button-col {
+    width: 250px;
+    margin: 14px;
+  }
   #res_status {
     float: right;
   }

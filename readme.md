@@ -1,27 +1,11 @@
-#Notes from Aces
+#Notes
 
-###Signed in Completed Trips (Trip History)
+- show/hide data toggles will need unique ids inserted so that they don't conflict with each other
 
-- When “Expand Detailed Charge” link is clicked. Container expands to show information shown on page 2 of pdf
+- The logo gif has been inserted into the create-account.html header, but the font isn't right. The logo and company name may need to be a single image. Or perhaps you can just use the logo gif after the initial splash page.
 
-- When resend receipt is clicked, expand to show input box for resending receipt to email entered. Example shown on page 2 of pdf.
+- The navbar is too long on ipad portrait view: limit nav links? Shorten link names? Drop down menu? Change query to menu button at larger view? Unfix the header?
 
-- Client can use search box to find a reservation by passenger last name or choose date (mm/yy/dddd) no time, just date.
+- the calendar glyph on the date search is displaying weird on ios. Is fine on browers and android.
 
-###Signed in Upcoming Trips:
-
-- Edits for confirmed trips will allow account holder to enter a different name, phone number or choose a different card for payment.
-
-- Resend confirmation button will expand to show text box for resending the confirmation as shown on page 2 of pdf.
-
-- Contact Chauffeur button will only show 20 minutes prior to reservation. Otherwise, hidden.
-
-#Questions:
-
-- Header Nav - add links for logged in?  PHP for auth state?
-
-- Edits for confirmed res - individual inputs? drop form? pop-up?
-
-- Resend password or forgot login form?
-
-- Greg to do code review?
+- date search input placeholder is displaying oddly on Windows Edge browser. It displays as a text input on IE 11. Everything displays as intended on Chrome for windows.
